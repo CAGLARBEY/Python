@@ -1,0 +1,31 @@
+import tkinter as tk
+import random
+
+def generate_password():
+    length = int(length_entry.get())
+    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
+    password = ''.join(random.choice(characters) for _ in range(length))
+
+    # Yeni pencereyi oluştur
+    password_window = tk.Toplevel(root)
+    password_window.title("Şifre")
+    password_window.geometry("200x200")  # Yeni pencere boyutunu ayarla
+    password_label = tk.Label(password_window, text="Oluşturulan Şifre:", font=("Arial", 14, "bold"))
+    password_result = tk.Label(password_window, text=password, font=("Arial", 12))
+
+    password_label.pack()
+    password_result.pack()
+
+root = tk.Tk()
+root.title("Rastgele Şifre Oluşturucu")
+root.geometry("300x300")  # Çerçeve boyutunu ayarla
+
+length_label = tk.Label(root, text="Şifre Uzunluğu:", font=("Arial", 14, "bold"))
+length_entry = tk.Entry(root)
+generate_button = tk.Button(root, text="Oluştur", command=generate_password)
+
+length_label.pack()
+length_entry.pack()
+generate_button.pack()
+
+root.mainloop()
