@@ -37,3 +37,12 @@ cd repo
 pip install -r requirements.txt
 ```
 
+## ⚠️ Uyarı
+
+**Bu araçlar sadece yasal pentest ve güvenlik araştırmaları için kullanılmalıdır.** Yetkisiz erişim yasaktır.
+
+## 📜 Lisans
+
+**MIT Lisansı** - Detaylar için `LICENSE` dosyasına bakınız.
+
+> **Not:** Tüm araçlar Python 3.x ile uyumludur. Kullanmadan önce ilgili `.py` dosyasındaki dokümantasyonu okuyunuz.
